@@ -37,6 +37,13 @@ VisionRunningMode = mp.tasks.vision.RunningMode
 
 # Path to downloaded task model
 MODEL_PATH = 'holistic_landmarker.task'
+MODEL_URL = 'https://storage.googleapis.com/mediapipe-models/holistic_landmarker/holistic_landmarker/float16/1/holistic_landmarker.task'
+
+import urllib.request
+if not os.path.exists(MODEL_PATH):
+    print(f"Downloading MediaPipe model to {MODEL_PATH}...")
+    urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+    print("Download complete.")
 
 def extract_landmarks(results):
     """Extract and flatten landmarks from mediapipe Tasks API results."""
