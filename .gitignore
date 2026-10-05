@@ -1,0 +1,22 @@
+# Python environments
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and large files
+data/raw/
+data/processed/
+data/splits/
+checkpoints/
+*.npy
+*.pkl
+*.h5
+*.pt
+*.pth
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
